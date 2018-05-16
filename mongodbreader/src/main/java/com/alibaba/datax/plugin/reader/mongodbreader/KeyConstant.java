@@ -13,6 +13,14 @@ public class KeyConstant {
      */
     public static final String DOCUMENT_ARRAY_TYPE = "document.array";
     /**
+     * 对象类型
+     */
+    public static final String OBJECT_TYPE = "object";
+    /**
+     * 嵌入文档对象类型
+     */
+    public static final String DOCUMENT_OBJECT_TYPE = "document.object";
+    /**
      * 嵌入文档类型
      */
     public static final String DOCUMENT_TYPE = "document";
@@ -89,6 +97,14 @@ public class KeyConstant {
      */
     public static boolean isArrayType(String type) {
         return ARRAY_TYPE.equals(type) || DOCUMENT_ARRAY_TYPE.equals(type);
+    }
+    /**
+     * 判断是否为对象类型
+     * @param type 数据类型
+     * @return
+     */
+    public static boolean isObjectType(String type) {
+        return OBJECT_TYPE.equals(type) || DOCUMENT_OBJECT_TYPE.equals(type);
     }
 
     public static boolean isDocumentType(String type) {

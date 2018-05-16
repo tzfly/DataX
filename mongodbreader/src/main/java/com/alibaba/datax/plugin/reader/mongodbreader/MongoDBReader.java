@@ -173,6 +173,8 @@ public class MongoDBReader extends Reader {
                                 String tempArrayStr = Joiner.on(splitter).join(array);
                                 record.addColumn(new StringColumn(tempArrayStr));
                             }
+                        }else if(KeyConstant.isObjectType(column.getString(KeyConstant.COLUMN_TYPE))) {
+                            record.addColumn(new StringColumn(JSON.toJSONString(tempCol)));
                         } else {
                             record.addColumn(new StringColumn(tempCol.toString()));
                         }
